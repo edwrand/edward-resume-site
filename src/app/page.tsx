@@ -53,7 +53,7 @@ export default function Home() {
             </p>
           </div>
           <img
-            src="https://via.placeholder.com/150"
+            src="/mypicture.jpg"
             alt="Edward Randall Profile Picture"
             className="hero-img"
           />
@@ -106,7 +106,7 @@ export default function Home() {
           />
 
           <ExperienceEntry
-            logo="https://via.placeholder.com/50"
+            logo="/f.png"
             alt="FMedia Network Logo"
             title="Co-Founder, FMedia Network"
             dates="January 2018 - January 2021"
