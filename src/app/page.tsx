@@ -45,7 +45,7 @@ export default function Home() {
         <header id="home" className="hero">
           <div className="hero-text">
             <h1>
-              Hi, I'm Edward <span className="wave-emoji">👋</span>
+              Hi, I&apos;m Edward <span className="wave-emoji">👋</span>
             </h1>
           </div>
           <img
