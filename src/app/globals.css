@@ -1,0 +1,235 @@
+/* src/app/globals.css */
+
+/* Reset & Base Typography */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* Dark Mode */
+body.dark {
+  background-color: #121212;
+  color: #ddd;
+}
+
+/* Floating Navbar */
+.navbar {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 0.5rem;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+
+body.dark .navbar {
+  background: rgba(18, 18, 18, 0.85);
+}
+
+/* Icon Button Styling for Navbar */
+.navbar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.3s;
+}
+
+.navbar a:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+body.dark .navbar a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Theme Toggle Button – extra clarity */
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+/* Container: slightly tighter layout */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Section Styles: reduce extra spacing */
+section {
+  padding: 0.1rem 0;
+  margin: 0.05rem 0;
+}
+
+/* Hero Section: updated to mimic Tanmay's layout */
+header.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.01rem;
+  padding: 0.2rem 0.1rem;
+}
+
+.hero-text {
+  flex: 1;
+  text-align: left;
+  margin-right: 1.5rem;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.wave-emoji {
+  margin-left: 0.25rem;
+}
+
+.name {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+/* Hero Image: circular and to the right */
+.hero-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Section Titles */
+section h2 {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #333;
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+/* Resume/Entry Layout for Work, Education, Skills */
+.experience-entry,
+.education-entry,
+.skills-entry {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.experience-entry img,
+.education-entry img,
+.skills-entry img {
+  flex-shrink: 0;
+}
+
+.experience-entry div,
+.education-entry div,
+.skills-entry div {
+  flex: 1;
+}
+
+.dates {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid #ccc;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Profile Image: Larger circle for your top profile picture (if used elsewhere) */
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+/* Logo Images: Smaller circles for company logos */
+.logo-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+
+/* Job title with arrow button inline */
+.job-title {
+  display: inline;
+  position: relative;
+}
+
+.collapse-btn {
+  margin-left: 8px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.job-title:hover .collapse-btn {
+  opacity: 1;
+}
+
+/* Animated description container */
+.description-container {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.description-container.expanded {
+  max-height: 500px;
+  /* Adjust as needed to fit your content */
+  opacity: 1;
+}
+
+/* Alternatively, if you're toggling the description directly without a wrapper,
+   you can apply a similar transition on the .description class:
+*/
+.description {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #444;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
