@@ -40,7 +40,6 @@ function ExperienceEntry({ logo, alt, title, dates, description }: {
 export default function Home() {
   return (
     <>
-      <Navbar />
       <main className="container">
         {/* Hero Section */}
         <header id="home" className="hero">
@@ -48,9 +47,6 @@ export default function Home() {
             <h1>
               Hi, I'm Edward <span className="wave-emoji">👋</span>
             </h1>
-            <p className="subtitle">
-              Data Engineer, I love building things!
-            </p>
           </div>
           <img
             src="/mypicture.jpg"
@@ -58,6 +54,9 @@ export default function Home() {
             className="hero-img"
           />
         </header>
+
+        {/* Navbar now placed immediately under the hero section */}
+        <Navbar />
 
         {/* About Section */}
         <section id="about">
@@ -100,9 +99,9 @@ export default function Home() {
           <ExperienceEntry
             logo="/devridge.jpg"
             alt="Devridge Technology Logo"
-            title="Co-Founder & Technical Project Manager, Devridge Technology Software Agency"
+            title="Co-Founder, Devridge Technology Software Agency"
             dates="November 2021 - May 2022"
-            description="Managed Ethereum smart contract development with Solidity and JavaScript for four clients. Oversaw technical documentation, client meetings, product management, and workflow structure. Earned 14 contracts on Upwork. Technologies/Tools: JavaScript, Solidity, Python, GitHub, Jira."
+            description="Managed Ethereum smart contract development with Solidity and JavaScript for more than eight clients. Oversaw technical documentation, client meetings, product management, and workflow structure. Earned 14 contracts on Upwork. Technologies/Tools: JavaScript, Solidity, Python, GitHub, Jira."
           />
 
           <ExperienceEntry
@@ -119,7 +118,7 @@ export default function Home() {
           <h2>Education</h2>
           <div className="education-entry">
             <img
-              src="https://via.placeholder.com/50"
+              src="/tcu.jpg"
               alt="TCU Logo"
               className="logo-img"
             />
@@ -138,32 +137,26 @@ export default function Home() {
         {/* Skills Section */}
         <section id="skills">
           <h2>Computer Skills</h2>
-          <div className="skills-entry">
-            <img
-              src="https://via.placeholder.com/50"
-              alt="Skills Logo"
-              className="logo-img"
-            />
-            <div>
-              <p>
-                <strong>Programming Languages:</strong> Python, JavaScript, basic Java<br />
-                <strong>Other Skills:</strong> Advanced SQL, Jinja SQL, HTML, CSS<br />
-                <strong>Data Visualizers:</strong> Looker, PowerBI, Tableau, SAP, Python (Matplotlib, Dash, Plotly)<br />
-                <strong>Data Concepts:</strong> Data Modeling, Data Architecture, ETL/ELT Procedures, Monitoring and Reporting Analytics
-              </p>
-            </div>
-          </div>
+          <ul className="skills-list">
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>Advanced SQL</li>
+            <li>Jinja SQL</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Looker</li>
+            <li>PowerBI</li>
+            <li>Tableau</li>
+            <li>SAP</li>
+            <li>Matplotlib</li>
+            <li>Plotly</li>
+            <li>Data Modeling</li>
+            <li>Data Architecture</li>
+            <li>ETL/ELT</li>
+            <li>PostgresSQL</li>
+            <li>Cybersecurity</li>
+          </ul>
         </section>
-
-        {/* My Projects Section */}
-        <section id="projects">
-          <h2>My Projects</h2>
-          <p>
-            Check out my latest work. I’ve worked on a variety of projects—from simple websites to complex web applications.
-            (Project details coming soon.)
-          </p>
-        </section>
-
 
         <footer>
           <p>&copy; 2025 Edward Randall. All rights reserved.</p>

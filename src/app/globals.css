@@ -23,14 +23,14 @@ body.dark {
 
 /* Floating Navbar */
 .navbar {
-  position: fixed;
-  top: 1rem;
+  top: 4rem;
   right: 1rem;
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
   background: rgba(255, 255, 255, 0.85);
-  padding: 0.5rem;
-  border-radius: 8px;
+  padding: 0.2rem;
+  margin-top: 1rem;
+  border-radius: 18px;
   backdrop-filter: blur(10px);
   z-index: 100;
 }
@@ -86,9 +86,10 @@ header.hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 0.01rem;
-  padding: 0.2rem 0.1rem;
+  /* Reduced from 2rem */
+  /* padding: 2rem 1rem; */
 }
+
 
 .hero-text {
   flex: 1;
@@ -97,7 +98,7 @@ header.hero {
 }
 
 .hero-text h1 {
-  font-size: 2rem;
+  font-size: 3.5rem;
   margin-bottom: 0.5rem;
 }
 
@@ -115,13 +116,19 @@ header.hero {
   margin-top: 0.5rem;
 }
 
-/* Hero Image: circular and to the right */
 .hero-img {
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   object-fit: cover;
+  position: relative;
+  top: 10px;
+  /* Moves image down */
+  left: -10px;
+  /* Moves image to the left */
 }
+
+
 
 /* Section Titles */
 section h2 {
@@ -130,7 +137,7 @@ section h2 {
   margin-bottom: 0.5rem;
   border-bottom: 1px solid #333;
   display: inline-block;
-  padding-bottom: 0.25rem;
+  padding-bottom: 0.5rem;
 }
 
 /* Resume/Entry Layout for Work, Education, Skills */
@@ -140,6 +147,7 @@ section h2 {
   display: flex;
   align-items: flex-start;
   margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .experience-entry img,
@@ -232,4 +240,43 @@ footer {
   line-height: 1.4;
   color: #444;
   transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+/* Skills Section: Pill-Shaped Tags */
+.skills-list {
+  display: flex;
+  /* put the items on a single line, wrapping as needed */
+  flex-wrap: wrap;
+  /* allow wrapping to a new line */
+  list-style: none;
+  /* remove default bullets */
+  padding: 0;
+  /* remove default padding */
+  margin: 1rem 0;
+  /* spacing around the list */
+  gap: 0.5rem;
+  /* spacing between each pill */
+}
+
+.skills-list li {
+  background-color: #222;
+  /* dark background, adjust as you like */
+  color: #fff;
+  /* white text for contrast */
+  padding: 0.5rem 1rem;
+  /* space inside the pill */
+  border-radius: 9999px;
+  /* large border radius to create the pill shape */
+  font-size: 0.875rem;
+  /* slightly smaller text */
+  cursor: default;
+  /* not clickable, but you could change if needed */
+  white-space: nowrap;
+  /* keep text on a single line within the pill */
+}
+
+/* Optional hover effect (if you want it) */
+.skills-list li:hover {
+  background-color: #333;
+  /* slightly lighter or darker on hover */
 }
