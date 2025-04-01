@@ -98,7 +98,7 @@ export default function Home() {
           />
 
           <ExperienceEntry
-            logo="https://via.placeholder.com/50"
+            logo="/devridge.jpg"
             alt="Devridge Technology Logo"
             title="Co-Founder & Technical Project Manager, Devridge Technology Software Agency"
             dates="November 2021 - May 2022"
