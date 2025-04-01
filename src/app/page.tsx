@@ -55,7 +55,7 @@ export default function Home() {
           />
         </header>
 
-        {/* Navbar now placed immediately under the hero section */}
+        {/* Navbar placed immediately under the hero section */}
         <Navbar />
 
         {/* About Section */}
@@ -75,7 +75,7 @@ export default function Home() {
           <ExperienceEntry
             logo="/datagift.jpg"
             alt="DataGift Logo"
-            title="Full Stack Software Engineer, DataGift"
+            title="Solo Full Stack Software Engineer, DataGift"
             dates="October 2024 - Present"
             description="Architected and implemented a full stack feedback marketplace SaaS platform for my small business venture. Built a scalable backend using Flask to serve HTML, CSS, and ReactJS pages. Designed everything from scratch—including database models, an RLDB star schema, security and fraud features using StripeJS, Google Auth, and proprietary workflows. Served as the admin superuser for dispute resolution. The live application serves several hundred users."
           />
