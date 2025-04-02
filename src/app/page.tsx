@@ -62,10 +62,7 @@ export default function Home() {
         <section id="about">
           <h2>About</h2>
           <p>
-            I am a Data Engineer with a passion for transforming raw data into actionable insights.
-            I specialize in building scalable data solutions and full‑stack applications that drive business impact.
-            Whether architecting backend systems or designing efficient data pipelines, I thrive on solving challenging problems.
-          </p>
+            Hi welcome to my resume/personal page. I like to code, read, and build stuff. Check out my links to connect with me or see my work.</p>
         </section>
 
         {/* Work Experience Section */}
@@ -136,7 +133,7 @@ export default function Home() {
 
         {/* Skills Section */}
         <section id="skills">
-          <h2>Computer Skills</h2>
+          <h2>Skills</h2>
           <ul className="skills-list">
             <li>Python</li>
             <li>JavaScript</li>
@@ -159,7 +156,7 @@ export default function Home() {
         </section>
 
         <footer>
-          <p>&copy; 2025 Edward Randall. All rights reserved.</p>
+          <p>&copy; 2025 Edward Randall</p>
         </footer>
       </main>
     </>

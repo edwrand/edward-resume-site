@@ -30,6 +30,14 @@ export default function Navbar() {
                     <path d="M24 4.557a9.83 9.83 0 01-2.828.775 4.932 4.932 0 002.165-2.724 9.864 9.864 0 01-3.127 1.195 4.916 4.916 0 00-8.38 4.482A13.945 13.945 0 011.671 3.149 4.916 4.916 0 003.195 9.72a4.9 4.9 0 01-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 01-2.224.084 4.92 4.92 0 004.6 3.417A9.867 9.867 0 010 19.54a13.924 13.924 0 007.548 2.212c9.057 0 14.01-7.496 14.01-13.986 0-.21-.005-.42-.015-.63A10.012 10.012 0 0024 4.557z" />
                 </svg>
             </a>
+            <a href="https://www.base.org/name/edwrand" title="Base Network" target="_blank" rel="noopener noreferrer">
+                {/* Placeholder Base Icon */}
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" />
+                    <text x="12" y="16" textAnchor="middle" fontFamily="Arial" fontSize="10" fill="currentColor">C</text>
+                </svg>
+            </a>
+
             <ThemeToggle />
         </nav>
     );
