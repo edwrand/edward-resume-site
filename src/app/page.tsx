@@ -82,7 +82,7 @@ export default function Home() {
             alt="BorrowWorks Logo"
             title="Data Engineer, BorrowWorks"
             dates="August 2023 - October 2024"
-            description="Led data modeling, architecture, ETL pipelines, and reporting for a Snowflake data warehouse with over 100 billion records. Reduced DBT model replication build time by ~25% and increased testing/alerting coverage by ~60%. Upgraded DBT core versions and SQL syntax, built three-dimensional models for new lending products, and created a cloud cost reporting system. Technologies: Python, Advanced SQL, Jinja SQL, Looker, Snowflake, DBT, Airflow."
+            description="Data modeling, architecture, ETL pipelines, and reporting for a Snowflake data warehouse with over 100 billion records. Reduced DBT model replication build time by ~25% and increased testing/alerting coverage by ~60%. Upgraded DBT core versions and SQL syntax, built three-dimensional models for new lending products, and created a cloud cost reporting system. Technologies: Python, Advanced SQL, Jinja SQL, Looker, Snowflake, DBT, Airflow."
           />
 
           <ExperienceEntry
