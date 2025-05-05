@@ -72,9 +72,16 @@ export default function Home() {
           <ExperienceEntry
             logo="/datagift.jpg"
             alt="DataGift Logo"
-            title="Solo Full Stack Software Engineer, DataGift"
+            title="Lead Software Engineer, DataGift"
             dates="October 2024 - Present"
-            description="Architected and implemented a full stack feedback marketplace SaaS platform for my small business venture. Built a scalable backend using Flask to serve HTML, CSS, and ReactJS pages. Designed everything from scratch—including database models, an RLDB star schema, security and fraud features using StripeJS, Google Auth, and proprietary workflows. Served as the admin superuser for dispute resolution. The live application serves several hundred users."
+            description="Built and led development of DataGift, an incentive engine now evolving into a plug-and-play developer SDK and incentive API. Using my SDK you can embed micro USDC rewards to gamify any user action within your application! The platform helps businesses and developers reward users for completing high-value actions (e.g., surveys, interviews, product demos) using fiat or USDC payments.
+
+• Architected and deployed a full-stack FastAPI/PostgreSQL app enabling direct Stripe/USDC payouts
+• Built a dynamic form engine for survey logic, rewards, and payout thresholds
+• Designed and documented a Python SDK and REST API for embedding incentive flows into apps
+• Integrated Stripe Payments, user authentication, and scheduled payout systems
+• Added support for event-based reward triggers, future-proofed for wallets and webhooks
+• Currently developing developer onboarding, SDK usage tracking, and event analytics dashboard"
           />
 
           <ExperienceEntry
