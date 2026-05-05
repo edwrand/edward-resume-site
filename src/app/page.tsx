@@ -179,7 +179,7 @@ export default function Home() {
               className="logo-img"
             />
             <div>
-              <h3>Texas Christian University</h3>
+              <h3>Texas Christian University — 2018 – 2023</h3>
               <p>
                 Bachelor of Science in Business Information Systems<br />
                 FinTech Certificate (Blockchain with Python, Machine Learning with Python, and AI with R)<br />
