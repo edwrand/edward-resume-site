@@ -6,6 +6,18 @@ import ThemeToggle from "./ThemeToggle";
 export default function Navbar() {
     return (
         <nav className="navbar">
+            <a
+                className="resume-btn"
+                href="/Edward_Randall_Resume_2026.pdf"
+                title="Download resume (PDF)"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <svg width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+                </svg>
+                <span>Resume</span>
+            </a>
             <a href="https://www.linkedin.com/in/edward-randall-b206b5197" title="LinkedIn" target="_blank" rel="noopener noreferrer">
                 <svg width="26" height="26" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 10.268h-3v-4.5c0-1.07-.93-2-2-2s-2 .93-2 2v4.5h-3v-9h3v1.268c.766-1.137 2.114-1.768 3.5-1.768 2.485 0 4.5 2.015 4.5 4.5v4z" />

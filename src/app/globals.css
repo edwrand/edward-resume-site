@@ -1,12 +1,40 @@
 /* src/app/globals.css */
 
 /* Reset & Base Typography */
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
   transition: background-color 0.3s, color 0.3s;
+}
+
+/* Scroll-reveal: sections fade + rise into view */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 body {
@@ -60,6 +88,31 @@ body.dark .navbar a:hover {
   background: rgba(255, 255, 255, 0.1);
 }
 
+/* Résumé download button in the navbar */
+.navbar a.resume-btn {
+  width: auto;
+  border-radius: 9999px;
+  gap: 0.35rem;
+  padding: 0 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: #222;
+  color: #fff;
+}
+
+.navbar a.resume-btn:hover {
+  background: #000;
+}
+
+body.dark .navbar a.resume-btn {
+  background: #eee;
+  color: #121212;
+}
+
+body.dark .navbar a.resume-btn:hover {
+  background: #fff;
+}
+
 /* Theme Toggle Button – extra clarity */
 .theme-toggle-btn {
   background: none;
@@ -70,9 +123,9 @@ body.dark .navbar a:hover {
 
 /* Container: slightly tighter layout */
 .container {
-  max-width: 800px;
+  max-width: 720px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1rem 1.25rem;
 }
 
 /* Section Styles: reduce extra spacing */
@@ -98,7 +151,7 @@ header.hero {
 }
 
 .hero-text h1 {
-  font-size: 3.5rem;
+  font-size: 2.6rem;
   margin-bottom: 0.5rem;
 }
 
@@ -132,12 +185,16 @@ header.hero {
 
 /* Section Titles */
 section h2 {
-  font-size: 1.8rem;
-  margin-top: 2rem;
+  font-size: 1.5rem;
+  margin-top: 1.75rem;
   margin-bottom: 0.5rem;
   border-bottom: 1px solid #333;
   display: inline-block;
   padding-bottom: 0.5rem;
+}
+
+body.dark section h2 {
+  border-bottom-color: #ccc;
 }
 
 /* Resume/Entry Layout for Work, Education, Skills */
@@ -148,6 +205,19 @@ section h2 {
   align-items: flex-start;
   margin-bottom: 1.5rem;
   margin-top: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 12px;
+  transition: background 0.2s ease;
+}
+
+.experience-entry:hover,
+.education-entry:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+body.dark .experience-entry:hover,
+body.dark .education-entry:hover {
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .experience-entry img,
@@ -205,12 +275,13 @@ footer {
 
 .collapse-btn {
   margin-left: 8px;
-  opacity: 0;
-  transition: opacity 0.3s;
+  opacity: 0.4;
+  transition: opacity 0.3s, transform 0.3s;
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  color: inherit;
 }
 
 .job-title:hover .collapse-btn {
@@ -366,4 +437,64 @@ body.dark .project-badge {
 .skills-list li:hover {
   background-color: #333;
   /* slightly lighter or darker on hover */
+}
+
+/* ── Mobile ─────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+
+  /* Keep hero side-by-side but scale it down to fit */
+  header.hero {
+    gap: 0.5rem;
+  }
+
+  .hero-text {
+    margin-right: 0;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-img {
+    width: 92px;
+    height: 92px;
+    left: 0;
+  }
+
+  /* Navbar wraps instead of overflowing off-screen */
+  .navbar {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: flex-start;
+  }
+
+  section h2 {
+    font-size: 1.35rem;
+    margin-top: 1.5rem;
+  }
+
+  /* Cards read better a touch tighter on small screens */
+  .project-entry {
+    gap: 0.75rem;
+    padding: 0.6rem;
+  }
+
+  .project-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .experience-entry,
+  .education-entry {
+    padding: 0.25rem;
+  }
+
+  .logo-img {
+    width: 42px;
+    height: 42px;
+    margin-right: 0.75rem;
+  }
 }

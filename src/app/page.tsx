@@ -1,7 +1,27 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import React from "react";
 import Navbar from "./components/Navbar";
+
+// Reveals elements with the `.reveal` class as they scroll into view.
+function useScrollReveal() {
+  useEffect(() => {
+    const els = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+    els.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+}
 
 // A component for a single experience entry with a collapsible description.
 function ExperienceEntry({ logo, alt, title, dates, description }: {
@@ -106,6 +126,7 @@ function ProjectEntry({ logo, alt, title, subtitle, href, badge }: {
 }
 
 export default function Home() {
+  useScrollReveal();
   return (
     <>
       <main className="container">
@@ -127,14 +148,14 @@ export default function Home() {
         <Navbar />
 
         {/* About Section */}
-        <section id="about">
+        <section id="about" className="reveal">
           <h2>About</h2>
           <p>
             Hi welcome to my resume/personal page. I like to code, read, and build stuff. Check out my links to connect with me or see my work.</p>
         </section>
 
         {/* Projects Section */}
-        <section id="projects">
+        <section id="projects" className="reveal">
           <h2>Projects</h2>
 
           <ProjectEntry
@@ -155,7 +176,7 @@ export default function Home() {
         </section>
 
         {/* Work Experience Section */}
-        <section id="experience">
+        <section id="experience" className="reveal">
           <h2>Work Experience</h2>
 
           <ExperienceEntry
@@ -216,7 +237,7 @@ export default function Home() {
         </section>
 
         {/* Education Section */}
-        <section id="education">
+        <section id="education" className="reveal">
           <h2>Education</h2>
           <div className="education-entry">
             <img
@@ -251,7 +272,7 @@ export default function Home() {
         </section>
 
         {/* Skills Section */}
-        <section id="skills">
+        <section id="skills" className="reveal">
           <h2>Skills</h2>
           <ul className="skills-list">
             <li>Python</li>
@@ -275,7 +296,7 @@ export default function Home() {
         </section>
 
         <footer>
-          <p>&copy; 2025 Edward Randall</p>
+          <p>&copy; 2026 Edward Randall</p>
         </footer>
       </main>
     </>
