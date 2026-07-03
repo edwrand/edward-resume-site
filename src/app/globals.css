@@ -253,6 +253,82 @@ footer {
   margin-bottom: 0.2rem;
 }
 
+/* Projects Section */
+.project-entry {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  padding: 0.75rem;
+  border: 1px solid #e2e2e2;
+  border-radius: 14px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+a.project-entry:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  border-color: #bbb;
+}
+
+body.dark .project-entry {
+  border-color: #2a2a2a;
+}
+
+body.dark a.project-entry:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  border-color: #444;
+}
+
+.project-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: #f4f4f4;
+}
+
+body.dark .project-img {
+  background: #1c1c1c;
+}
+
+.project-title {
+  margin: 0 0 0.15rem 0;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.project-subtitle {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+body.dark .project-subtitle {
+  color: #aaa;
+}
+
+.project-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 9999px;
+  background: #ffe8b3;
+  color: #7a5200;
+}
+
+body.dark .project-badge {
+  background: #4a3a12;
+  color: #ffd98a;
+}
+
 /* Skills Section: Pill-Shaped Tags */
 .skills-list {
   display: flex;

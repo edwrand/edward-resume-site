@@ -66,6 +66,45 @@ function ExperienceEntry({ logo, alt, title, dates, description }: {
   );
 }
 
+// A component for a single project entry. If `href` is provided the whole
+// card links out; otherwise it renders as a static "coming soon" style card.
+function ProjectEntry({ logo, alt, title, subtitle, href, badge }: {
+  logo: string;
+  alt: string;
+  title: string;
+  subtitle: string;
+  href?: string;
+  badge?: string;
+}) {
+  const inner = (
+    <>
+      <img src={logo} alt={alt} className="project-img" />
+      <div>
+        <h3 className="project-title">
+          {title}
+          {badge && <span className="project-badge">{badge}</span>}
+        </h3>
+        <p className="project-subtitle">{subtitle}</p>
+      </div>
+    </>
+  );
+
+  if (href) {
+    return (
+      <a
+        className="project-entry"
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {inner}
+      </a>
+    );
+  }
+
+  return <div className="project-entry">{inner}</div>;
+}
+
 export default function Home() {
   return (
     <>
@@ -92,6 +131,27 @@ export default function Home() {
           <h2>About</h2>
           <p>
             Hi welcome to my resume/personal page. I like to code, read, and build stuff. Check out my links to connect with me or see my work.</p>
+        </section>
+
+        {/* Projects Section */}
+        <section id="projects">
+          <h2>Projects</h2>
+
+          <ProjectEntry
+            logo="/valore.png"
+            alt="Valoré App Icon"
+            title="Valoré"
+            subtitle="iOS app — available now on the App Store"
+            href="https://apps.apple.com/us/app/valor%C3%A9/id6760678152"
+          />
+
+          <ProjectEntry
+            logo="/newtopia.png"
+            alt="Newtopia Pixel Character"
+            title="Newtopia"
+            subtitle="iOS TypeScript game — coming soon"
+            badge="Coming soon"
+          />
         </section>
 
         {/* Work Experience Section */}
